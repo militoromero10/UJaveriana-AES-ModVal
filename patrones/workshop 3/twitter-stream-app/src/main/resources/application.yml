@@ -1,0 +1,5 @@
+micronaut:
+  application:
+    name: twitter-stream-app
+rabbitmq:
+  uri: amqp://172.18.0.50:5672

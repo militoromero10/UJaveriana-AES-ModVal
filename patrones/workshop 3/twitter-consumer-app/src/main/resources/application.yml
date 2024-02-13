@@ -1,0 +1,32 @@
+micronaut:
+  application:
+    name: twitter-consumer-app
+  server:
+    port: 8082
+datasources:
+  default:
+    driver-class-name: org.mariadb.jdbc.Driver
+    db-type: mariadb
+    url: jdbc:mariadb://172.18.0.51:3306/patterns-twitter
+    username: patterns
+    password: patterns
+
+rabbitmq:
+  uri: amqp://172.18.0.50:5672
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        show_sql: true
+        hbm2ddl:
+          auto: update
+    entity-scan:
+      packages: edu.javeriana.patterns.twitter.model
+
+
+flyway:
+  datasources:
+    default:
+      enabled: false
+datasources.default: { }

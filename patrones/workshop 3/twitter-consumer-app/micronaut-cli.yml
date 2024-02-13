@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: edu.javeriana.patterns.twitter
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [ app-name, gradle, http-client, java, java-application, jdbc-hikari, jib, junit, logback, lombok, mariadb, micronaut-aot, micronaut-build, micronaut-http-validation, mockito, netty-server, rabbitmq, reactor, reactor-http-client, readme, serialization-jackson, shade, static-resources, test-resources, validation, yaml, yaml-build ]

@@ -1,0 +1,102 @@
+plugins {
+    id("com.github.johnrengelman.shadow") version "8.1.1"
+    id("io.micronaut.application") version "4.3.2"
+    id("com.google.cloud.tools.jib") version "2.8.0"
+    id("io.micronaut.test-resources") version "4.3.2"
+    id("io.micronaut.aot") version "4.3.2"
+}
+
+version = "0.1"
+group = "edu.javeriana.patterns.twitter"
+
+repositories {
+    mavenCentral()
+
+}
+
+dependencies {
+    annotationProcessor("org.projectlombok:lombok")
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("io.micronaut.serde:micronaut-serde-processor")
+    annotationProcessor("io.micronaut.validation:micronaut-validation-processor")
+    implementation("io.micronaut:micronaut-http-client")
+    implementation("io.micronaut.rabbitmq:micronaut-rabbitmq")
+    // https://mvnrepository.com/artifact/io.projectreactor/reactor-core
+    implementation group: 'io.projectreactor', name: 'reactor-core', version: '3.6.2'
+
+    implementation("io.micronaut.serde:micronaut-serde-jackson")
+    implementation("io.micronaut.validation:micronaut-validation")
+    implementation("jakarta.validation:jakarta.validation-api")
+    implementation "com.twitter:twitter-api-java-sdk:2.0.3"
+
+// https://mvnrepository.com/artifact/org.twitter4j/twitter4j-stream
+// https://mvnrepository.com/artifact/org.twitter4j/twitter4j-core
+//    implementation group: 'org.twitter4j', name: 'twitter4j-core', version: '4.1.2'
+// https://mvnrepository.com/artifact/com.twitter/twitter-api-java-sdk
+    // https://mvnrepository.com/artifact/org.twitter4j/twitter4j-stream
+    implementation group: 'org.twitter4j', name: 'twitter4j-stream', version: '4.0.7'
+
+    implementation group: 'com.twitter', name: 'twitter-api-java-sdk', version: '2.0.3'
+// https://mvnrepository.com/artifact/com.github.redouane59.twitter/twittered
+    implementation group: 'com.github.redouane59.twitter', name: 'twittered', version: '1.26'
+
+// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.14'
+
+
+// https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
+//    implementation group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.14'
+
+    compileOnly("org.projectlombok:lombok")
+    runtimeOnly("ch.qos.logback:logback-classic")
+    runtimeOnly("org.yaml:snakeyaml")
+    testImplementation("org.mockito:mockito-core")
+
+}
+
+
+application {
+    mainClass.set("edu.javeriana.patterns.twitter.Application")
+}
+java {
+    sourceCompatibility = JavaVersion.toVersion("17")
+    targetCompatibility = JavaVersion.toVersion("17")
+}
+
+
+tasks {
+    jib {
+        to {
+            image = "gcr.io/patterns/jib-twitter-stram-app"
+        }
+        from {
+            image = "docker.io/library/eclipse-temurin:17"
+        }
+    }
+}
+graalvmNative.toolchainDetection = false
+micronaut {
+    runtime("netty")
+    testRuntime("junit5")
+    processing {
+        incremental(true)
+        annotations("edu.javeriana.patterns.twitter.*")
+    }
+    testResources {
+        sharedServer = true
+    }
+    aot {
+    // Please review carefully the optimizations enabled below
+    // Check https://micronaut-projects.github.io/micronaut-aot/latest/guide/ for more details
+        optimizeServiceLoading = false
+        convertYamlToJava = false
+        precomputeOperations = true
+        cacheEnvironment = true
+        optimizeClassLoading = true
+        deduceEnvironment = true
+        optimizeNetty = true
+    }
+}
+
+
+
