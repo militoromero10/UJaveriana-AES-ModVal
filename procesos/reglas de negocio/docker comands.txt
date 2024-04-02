@@ -1,0 +1,2 @@
+docker pull openltablets/demo
+docker run -d --rm -p 9081:8080 openltablets/demo
