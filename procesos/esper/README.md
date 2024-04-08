@@ -2,7 +2,7 @@
 > ejectuar dentro de la carpeta `cep-docker` el siguiente comando `docker build -t cep-sar:1.0.0 .`
 
 # Crear el contenedor que estar escuchando en el puerto 8088
-> ejecutar el siguiente comando `docker run -d --rm -p 8088:8088 cep-sar:1.0.0`
+> ejecutar el siguiente comando `docker run -d --name esper-sar -p 8088:8088 cep-sar:1.0.0`
 
 # Ejemplo de ejecucion
 > Para disparar el Procesador de Eventos complejos, deben hacer la una peticion POST como en el ejemplo
