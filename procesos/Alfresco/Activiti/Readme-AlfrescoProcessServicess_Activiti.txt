@@ -80,9 +80,9 @@ En http://localhost:8085/activiti-app/
 
 Ir a App Designer, luego importar el modelo ValidateDesign.bpmn
 
-Luego, en la pestna Apps crear una nueva aplicacion con el nombre validateMarketingDesign
+Luego, en la pestaña Apps crear una nueva aplicacion con el nombre validateMarketingDesign
 
-Editar modulos incluidos de la aplicacion crada para agregar el model validateMarketingDesign
+Editar modulos incluidos de la aplicacion creada para agregar el model validateMarketingDesign
 
 Guardar y luego Publicar la aplicacion haciendo click en Publish.
 
@@ -104,3 +104,13 @@ Autenticacion BASIC
 	admin
 
 Payload: {"processDefinitionKey":"validateMarketingDesign"}
+
+{
+  "processDefinitionKey": "validateMarketingDesign",
+  "variables": [
+    {
+      "name": "bonitaInstanceId",
+      "value": "13465"
+    }
+  ]
+}
