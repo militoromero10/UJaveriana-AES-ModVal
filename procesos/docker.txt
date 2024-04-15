@@ -1,0 +1,10 @@
+docker network create --subnet=172.19.0.0/16 bonita_network
+
+docker run -h sar-mysql --net bonita_network --ip 172.19.0.53 -d --name sar-mysql -p 3306:3306 bonitasoft/bonita-mysql:8.0.33
+docker run --name bonita --net bonita_network --ip 172.19.0.51 -e DB_VENDOR=mysql -e DB_HOST=172.19.0.53 -e DB_PORT=3306 -e DB_NAME=bonita -e DB_USER=bonita -e DB_PASS=bpm -e BIZ_DB_NAME=business_data -e BIZ_DB_USER=business_data -e BIZ_DB_PASS=bpm -d -p 8888:8080 bonita:2023.2
+
+docker run --net bonita_network --ip 172.19.0.52 -d --name openltablets  -p 9081:8080 openltablets/demo
+docker run --net bonita_network --ip 172.19.0.54 -d --name esper-sar -p 8088:8088 cep-sar:1.0.0
+
+docker run --net bonita_network --ip 172.19.0.80 -d --name alfredo -p 8085:8080 alfresco/process-services:24.1.0
+docker run --net bonita_network --ip 172.19.0.81 -d --name alfredo-process -p 8086:8080 alfresco/process-services-admin:24.1.0

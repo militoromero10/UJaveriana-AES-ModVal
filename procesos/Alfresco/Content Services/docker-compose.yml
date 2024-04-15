@@ -17,6 +17,9 @@ version: "2"
 services:
     alfresco:
         image: quay.io/alfresco/alfresco-content-repository:23.1.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.55
         mem_limit: 1900m
         environment:
             JAVA_TOOL_OPTIONS: -Dencryption.keystore.type=JCEKS -Dencryption.cipherAlgorithm=DESede/CBC/PKCS5Padding -Dencryption.keyAlgorithm=DESede -Dencryption.keystore.location=/usr/local/tomcat/shared/classes/alfresco/extension/keystore/keystore -Dmetadata-keystore.password=mp6yc0UD9e -Dmetadata-keystore.aliases=metadata -Dmetadata-keystore.metadata.password=oKIWzVdEdA -Dmetadata-keystore.metadata.algorithm=DESede
@@ -57,6 +60,9 @@ services:
     transform-router:
         mem_limit: 512m
         image: quay.io/alfresco/alfresco-transform-router:4.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.56
         environment:
             JAVA_OPTS: -XX:MinRAMPercentage=50 -XX:MaxRAMPercentage=80
             ACTIVEMQ_URL: nio://activemq:61616
@@ -68,6 +74,9 @@ services:
             - activemq
     transform-core-aio:
         image: alfresco/alfresco-transform-core-aio:5.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.57
         mem_limit: 1536m
         environment:
             JAVA_OPTS: -XX:MinRAMPercentage=50 -XX:MaxRAMPercentage=80
@@ -79,6 +88,9 @@ services:
             - activemq
     shared-file-store:
         image: quay.io/alfresco/alfresco-shared-file-store:4.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.58
         mem_limit: 512m
         environment:
             JAVA_OPTS: -XX:MinRAMPercentage=50 -XX:MaxRAMPercentage=80
@@ -90,6 +102,9 @@ services:
             - shared-file-store-volume:/tmp/Alfresco/sfs
     share:
         image: quay.io/alfresco/alfresco-share:23.1.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.59
         mem_limit: 1g
         environment:
             REPO_HOST: "alfresco"
@@ -97,6 +112,9 @@ services:
             JAVA_OPTS: -XX:MinRAMPercentage=50 -XX:MaxRAMPercentage=80 -Dalfresco.host=localhost -Dalfresco.port=8080 -Dalfresco.context=alfresco -Dalfresco.protocol=http
     postgres:
         image: postgres:14.4
+        networks:
+            network1:
+                ipv4_address: 172.19.0.60
         mem_limit: 512m
         environment:
             - POSTGRES_PASSWORD=alfresco
@@ -107,6 +125,9 @@ services:
             - "5432:5432"
     elasticsearch:
         image: elasticsearch:7.10.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.61
         environment:
             - xpack.security.enabled=false
             - discovery.type=single-node
@@ -124,6 +145,9 @@ services:
             - 9300:9300
     search:
         image: quay.io/alfresco/alfresco-elasticsearch-live-indexing:4.0.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.62
         mem_limit: 1g
         depends_on:
             - elasticsearch
@@ -135,6 +159,9 @@ services:
             SPRING_ELASTICSEARCH_REST_URIS: http://elasticsearch:9200
     search-reindexing:
         image: quay.io/alfresco/alfresco-elasticsearch-reindexing:4.0.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.63
         mem_limit: 1g
         restart: on-failure:10
         environment:
@@ -153,6 +180,9 @@ services:
                 condition: service_healthy
     activemq:
         image: alfresco/alfresco-activemq:5.18-jre17-rockylinux8
+        networks:
+            network1:
+                ipv4_address: 172.19.0.64
         mem_limit: 1g
         ports:
             - "8161:8161" # Web Console
@@ -161,6 +191,9 @@ services:
             - "61613:61613" # STOMP
     digital-workspace:
         image: quay.io/alfresco/alfresco-digital-workspace:4.3.0
+        networks:
+            network1:
+                ipv4_address: 172.19.0.65
         mem_limit: 128m
         environment:
             APP_CONFIG_PROVIDER: "ECM"
@@ -171,6 +204,9 @@ services:
             APP_BASE_SHARE_URL: "http://localhost:8080/workspace/#/preview/s"
     control-center:
         image: quay.io/alfresco/alfresco-control-center:8.3.0
+        networks:
+            network1:
+                ipv4_address: 172.19.0.66
         mem_limit: 128m
         environment:
             APP_CONFIG_PROVIDER: "ECM"
@@ -178,6 +214,9 @@ services:
             BASE_PATH: ./
     proxy:
         image: alfresco/alfresco-acs-nginx:3.4.2
+        networks:
+            network1:
+                ipv4_address: 172.19.0.67
         mem_limit: 128m
         depends_on:
             - alfresco
@@ -188,11 +227,18 @@ services:
             - "8080:8080"
     sync-service:
         image: quay.io/alfresco/service-sync:4.0.1
+        networks:
+            network1:
+                ipv4_address: 172.19.0.68
         mem_limit: 1g
         environment:
             JAVA_OPTS: -Dsql.db.driver=org.postgresql.Driver -Dsql.db.url=jdbc:postgresql://postgres:5432/alfresco -Dsql.db.username=alfresco -Dsql.db.password=alfresco -Dmessaging.broker.host=activemq -Drepo.hostname=alfresco -Drepo.port=8080 -Ddw.server.applicationConnectors[0].type=http -XX:MinRAMPercentage=50 -XX:MaxRAMPercentage=80
         ports:
             - "9090:9090"
+networks:
+  network1:
+    name: bonita_network
+    external: true
 volumes:
     shared-file-store-volume:
         driver_opts:
