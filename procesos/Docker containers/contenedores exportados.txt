@@ -1,0 +1,7 @@
+https://drive.google.com/drive/u/2/folders/1uKoTPIYg_ZZcnrzq0U22oDXi9qj506zm
+
+Ejemplo para importar:
+
+En la carpeta donde haya descargado los .tar
+
+> docker import bonita.tar feita:latest
