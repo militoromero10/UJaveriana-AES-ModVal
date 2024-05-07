@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: edu.javeriana.pojos.patterns
+testFramework: junit
+sourceLanguage: java
+buildTool: gradle
+features: [app-name, asciidoctor, gradle, http-client, java, java-application, jib, junit, junit-params, logback, lombok, management, micrometer, micrometer-new-relic, micronaut-aop, micronaut-aot, micronaut-build, micronaut-http-validation, mockito, netty-server, openapi, openapi-adoc, openapi-explorer, rabbitmq, rapidoc, readme, serialization-jackson, shade, static-resources, swagger-ui, test-resources, yaml, yaml-build]
