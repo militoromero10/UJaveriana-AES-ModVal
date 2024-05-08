@@ -35,3 +35,4 @@ El patrón "Publish & Subscribe Channel" fue elegido porque proporciona desacopl
 ## Referencias
 - [Publish & Subscribe Pattern - Martin Fowler](https://martinfowler.com/articles/pattern-pubsub.html)
 - [Understanding Publish/Subscribe Architecture](https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

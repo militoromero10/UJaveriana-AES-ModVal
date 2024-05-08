@@ -34,3 +34,4 @@ Se eligió Micronaut porque ofrece un tiempo de arranque rápido, bajo consumo d
 ## Referencias
 - [Micronaut Documentation](https://micronaut.io/documentation/)
 - [Micronaut Serverless Examples](https://micronaut.io/examples/)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

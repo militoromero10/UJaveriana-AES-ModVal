@@ -48,3 +48,4 @@ La combinación de Event Sourcing y snapshots periódicos permite tener lo mejor
 ## Referencias
 - [Event Sourcing - Martin Fowler](https://martinfowler.com/eaaDev/EventSourcing.html)
 - [Event Sourcing with Snapshots](https://docs.microsoft.com/en-us/azure/architecture/patterns/event-sourcing-snapshots)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

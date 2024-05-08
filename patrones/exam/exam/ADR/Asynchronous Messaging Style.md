@@ -35,3 +35,4 @@ Se eligió el estilo de mensajería asíncrona porque proporciona desacoplamient
 ## Referencias
 - [Asynchronous Messaging - Martin Fowler](https://martinfowler.com/articles/evendDriven.html#asynchronous)
 - [Building Distributed Systems with Asynchronous Messaging](https://docs.microsoft.com/en-us/azure/architecture/patterns/asynchronous-messaging)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

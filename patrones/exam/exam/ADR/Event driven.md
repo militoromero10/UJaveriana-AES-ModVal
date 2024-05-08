@@ -37,3 +37,4 @@ La arquitectura orientada a eventos proporciona la flexibilidad y escalabilidad 
 ## Referencias
 - [Event-Driven Architecture - Martin Fowler](https://martinfowler.com/articles/evendDriven.html)
 - [Introduction to Event-Driven Architecture](https://en.wikipedia.org/wiki/Event-driven_architecture)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

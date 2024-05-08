@@ -35,3 +35,4 @@ La decisión de usar Message Transformation con JSLT se justifica por la flexibi
 ## Referencias
 - [JSLT Documentation](https://github.com/schibsted/jslt)
 - [Message Transformation - Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/MessageTranslator.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

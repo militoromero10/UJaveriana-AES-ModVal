@@ -34,3 +34,4 @@ La combinación de Retry y Circuit Breaker proporciona resiliencia y flexibilida
 ## Referencias
 - [Circuit Breaker Pattern - Martin Fowler](https://martinfowler.com/bliki/CircuitBreaker.html)
 - [Retry Pattern - AWS Documentation](https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

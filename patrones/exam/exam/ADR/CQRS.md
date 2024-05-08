@@ -41,3 +41,4 @@ CQRS fue elegido porque proporciona la separación clara entre comandos y consul
 ## Referencias
 - [CQRS - Martin Fowler](https://martinfowler.com/bliki/CQRS.html)
 - [CQRS en Arquitecturas Distribuidas](https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

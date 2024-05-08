@@ -55,3 +55,4 @@ Elegimos serverless sobre microservicios por las siguientes razones:
 ## Referencias
 - [AWS Lambda Documentation](https://docs.aws.amazon.com/lambda/)
 - [Introduction to Serverless Architecture](https://martinfowler.com/articles/serverless.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

@@ -45,3 +45,4 @@ La arquitectura híbrida permite aprovechar las ventajas de ambos mundos: escala
 ## Referencias
 - [Serverless Patterns](https://martinfowler.com/articles/serverless.html)
 - [Best Practices for Hybrid Architectures](https://aws.amazon.com/architecture/hybrid/)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

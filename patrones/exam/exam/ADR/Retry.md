@@ -36,3 +36,4 @@ La implementación del patrón Retry con SQS/SNS y AWS Lambda se justifica por l
 ## Referencias
 - [Amazon SQS - Retry Policy](https://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-retry-policy.html)
 - [AWS Lambda - Retry Strategy](https://docs.aws.amazon.com/lambda/latest/dg/retries-on-errors.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

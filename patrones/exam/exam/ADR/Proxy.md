@@ -35,3 +35,4 @@ El patrón Proxy fue elegido porque proporciona control de acceso, modularidad y
 ## Referencias
 - [Proxy Pattern - Wikipedia](https://en.wikipedia.org/wiki/Proxy_pattern)
 - [Design Patterns - Proxy](https://www.oodesign.com/proxy-pattern.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

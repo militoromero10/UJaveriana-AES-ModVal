@@ -9,12 +9,7 @@ El sistema necesita ser resiliente y capaz de adaptarse a cambios inesperados, c
 Para abordar estos desafíos, se considera aplicar principios de antifragilidad en el diseño del sistema, permitiendo 
 que el sistema crezca y se adapte a condiciones adversas.
 
-Hay dos vistas sobre la disponibilidad de los servicios, la interna y la externa. 
-En el caso de la externa podemos asumir que el SLA con los convenios es del 99.9%. 
-Internamente la directriz del banco es que sus servicios internos estén preparados para tener una disponibilidad del 99.99%. 
-No es parte del alcance, pero normalmente debería haber capacidades de monitoreo y observabilidad que perminten 
-comprender cual parte del sistema esta fallando o se encuentre indisponibles. Se debe aportar una solución 
-que considere poder llegar a ese 99.99%.
+Hay dos vistas sobre la disponibilidad de los servicios, la interna y la externa. En el caso de la externa podemos asumir que el SLA con los convenios es del 99.9%. Internamente la directriz del banco es que sus servicios internos estén preparados para tener una disponibilidad del 99.99%. No es parte del alcance, pero normalmente debería haber capacidades de monitoreo y observabilidad que permiten comprender cual parte del sistema está fallando o se encuentre indisponibles. Se debe aportar una solución que considere poder llegar a ese 99.99%.
 
 El proyecto de pago de servicios de convenios diferencia a este banco de la competencia. Permite al Banco tener fidelidad de clientes y aumentar su portafolio de servicios.
 
@@ -47,3 +42,4 @@ Se eligió diseñar el sistema con principios de antifragilidad porque permite a
 ## Referencias
 - [Antifragile: Things That Gain from Disorder - Nassim Nicholas Taleb](https://en.wikipedia.org/wiki/Antifragile)
 - [Designing for Antifragility](https://martinfowler.com/articles/antifragility.html)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)

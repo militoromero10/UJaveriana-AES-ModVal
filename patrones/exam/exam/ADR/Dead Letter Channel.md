@@ -35,3 +35,4 @@ El patrón Dead Letter Channel fue elegido porque proporciona un mecanismo confi
 ## Referencias
 - [Dead Letter Channel - Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/patterns/messaging/DeadLetterChannel.html)
 - [Understanding Dead Letter Queues](https://aws.amazon.com/message-queuing/dead-letter-queue/)
+- [Preguntas al profesor](https://github.com/militoromero10/UJaveriana-AES-ModVal/tree/master/patrones/exam/exam/ADR/ref/preguntas.pdf)
