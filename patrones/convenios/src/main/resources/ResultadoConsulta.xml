@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pay:ResultadoConsulta xmlns:pay="http://www.servicios.co/pagos/schemas" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.servicios.co/pagos/schemas example.xsd">
+    <pay:referenciaFactura>
+        <pay:referenciaFactura>123456789</pay:referenciaFactura>
+    </pay:referenciaFactura>
+    <pay:totalPagar>1500.50</pay:totalPagar>
+</pay:ResultadoConsulta>
